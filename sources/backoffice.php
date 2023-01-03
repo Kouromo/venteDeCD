@@ -7,7 +7,7 @@
         echo "</head>";
         
         echo "<body>";
-        echo "<form method=post action=insert.php>";
+        echo "<form method=post action=ajouterCD.php>";
         echo "<label for=title>Titre :</label><br>";
         echo "<input type=text name=title id=title><br>";
         echo "<label for=artist>Artiste :</label><br>";
