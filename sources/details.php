@@ -25,24 +25,28 @@
         <main>
             <!-- Contenu de la page -->
             <?php
+                // Démarre la session
+                session_start();
+
                 // Charge le fichier XML dans un objet SimpleXML
                 $xml = simplexml_load_file('../BD/bd.xml');
 
-                // Récupère l'identifiant de l'image dans la variable $id
+                // Récupère l'identifiant de l'article dans la variable $id
                 $id = $_GET['id'];
 
-                // Utilise l'identifiant de l'image pour afficher les détails de l'image sur la page detail.php
+                // Utilise l'identifiant de l'article pour afficher les détails de l'article sur la page detail.php
                 echo '<img class="image" src="../BD/Images/' . $xml->cd[$id-1]->image . '" alt="Texte alternatif"></a>';
                 echo '<h2>' . $xml->cd[$id-1]->titre . '</h2>';
                 echo '<p>' . $xml->cd[$id-1]->auteur . '</p>';
                 echo '<p>' . $xml->cd[$id-1]->prix . '</p>';
-            ?>
 
-            <!-- Bouton "Ajouter au panier" -->
-            <form action="panier.php" method="post">
-                <input type="hidden" name="id" value="<?php echo $id; ?>">
-                <input type="submit" value="Ajouter au panier">
-            </form>
+                // Bouton "Ajouter au panier"
+                echo '<form action="panier.php" method="post">';
+                echo '<input type="hidden" name="id" value="' . $id . '">';
+                echo '<input type="submit" value="Ajouter au panier">';
+                echo '</form>';
+
+        ?>
         </main>
     </body>
 </html>
