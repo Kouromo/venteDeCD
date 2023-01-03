@@ -4,7 +4,7 @@
 		<id>1</id>
         <titre>Black Out Days</titre>
         <genre>Musique alternative/indé</genre>
-        <image>Images/blackOutDays.jpg</image>
+        <image>blackOutDays.jpg</image>
         <auteur>Phantogram</auteur>
         <prix>5€</prix>
         <album>Voices</album>
@@ -13,7 +13,7 @@
 		<id>2</id>
         <titre>Blinding Lights</titre>
         <genre>RB/Soul, Synthwave, Pop</genre>
-        <image>Images/BlindingLights.jpg</image>
+        <image>BlindingLights.jpg</image>
         <auteur>The Weeknd</auteur>
         <prix>6€</prix>
         <album>Blinding Lights</album>
@@ -22,7 +22,7 @@
 		<id>3</id>
         <titre>It's About Damn Time</titre>
         <genre>Funk, RB/Soul, Musique pour enfants, Post-disco, Pop</genre>
-        <image>Images/itsAboutDamnTime.jpg</image>
+        <image>itsAboutDamnTime.jpg</image>
         <auteur>Lizzo</auteur>
         <prix>5€</prix>
         <album>Special</album>
@@ -31,7 +31,7 @@
 		<id>4</id>
         <titre>Somebody's Watching me</titre>
         <genre>RB/Soul</genre>
-        <image>Images/SomebodysWatchingMe.jpg</image>
+        <image>SomebodysWatchingMe.jpg</image>
         <auteur>Rockwell</auteur>
         <prix>5€</prix>
         <album>Somebody's Watching Me</album>
@@ -40,7 +40,7 @@
 		<id>5</id>
         <titre>Stayin' Alive</titre>
         <genre>Disco, Halloween music, Musique vocale/Easy listening, Rock</genre>
-        <image>Images/StayingAlive.jpg</image>
+        <image>StayingAlive.jpg</image>
         <auteur>Bee Gees</auteur>
         <prix>5€</prix>
         <album>Saturday Night Fever</album>
@@ -49,7 +49,7 @@
 		<id>6</id>
         <titre>Wait a Minute!</titre>
         <genre>Musique alternative/indé, RnB alternatif, Pop expérimentale</genre>
-        <image>Images/waitAMinute.jpg</image>
+        <image>waitAMinute.jpg</image>
         <auteur>Willow Smith</auteur>
         <prix>4€</prix>
         <album>Ardipithecus</album>

@@ -32,7 +32,7 @@
                 $id = $_GET['id'];
 
                 // Utilise l'identifiant de l'image pour afficher les détails de l'image sur la page detail.php
-                echo '<img class="image" src="../BD/' . $xml->cd[$id-1]->image . '" alt="Texte alternatif"></a>';
+                echo '<img class="image" src="../BD/Images/' . $xml->cd[$id-1]->image . '" alt="Texte alternatif"></a>';
                 echo '<h2>' . $xml->cd[$id-1]->titre . '</h2>';
                 echo '<p>' . $xml->cd[$id-1]->auteur . '</p>';
                 echo '<p>' . $xml->cd[$id-1]->prix . '</p>';
