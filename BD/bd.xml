@@ -1,24 +1,49 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <cd>
-	<titre></titre>
-	<genre></genre>
-	<image></image> // lien relatif absolu
-	<auteur></auteur>
-	<prix></prix>
+	<titre>Black Out Days</titre>
+	<genre>Musique alternative/indé</genre>
+	<image>J:\WWW\s3\projetCD\BD\Images\blackOutDays</image>
+	<auteur>Phantogram</auteur>
+	<prix>5€</prix>
+	<album>Voices</album>
 </cd>
 <cd>
-	<titre></titre>
-	<genre></genre>
-	<image></image>
-	<auteur></auteur>
-	<prix></prix>
-
+	<titre>Blinding Lights</titre>
+	<genre>R&B/Soul, Synthwave, Pop</genre>
+	<image>J:\WWW\s3\projetCD\BD\Images\BlindingLights</image>
+	<auteur>The Weeknd</auteur>
+	<prix>6€</prix>
+	<album>Blinding Lights</album>
 </cd>
 <cd>
-	<titre></titre>
-	<genre></genre>
-	<image></image>
-	<auteur></auteur>
-	<prix></prix>
-
+	<titre>It's About Damn Time</titre>
+	<genre>Funk, R&B/Soul, Musique pour enfants, Post-disco, Pop</genre>
+	<image>J:\WWW\s3\projetCD\BD\Images\itsAboutDamnTime</image>
+	<auteur>Lizzo</auteur>
+	<prix>5€</prix>
+	<album>Special</album>
+</cd>
+<cd>
+	<titre>Somebody's Watching me</titre>
+	<genre>R&B/Soul</genre>
+	<image>J:\WWW\s3\projetCD\BD\Images\SomebodysWatchingMe</image>
+	<auteur>Rockwell</auteur>
+	<prix>5€</prix>
+	<album>Somebody's Watching Me</album>
+</cd>
+<cd>
+	<titre>Stayin' Alive</titre>
+	<genre>Disco, Halloween music, Musique vocale/Easy listening, Rock</genre>
+	<image>J:\WWW\s3\projetCD\BD\Images\StayingAlive</image>
+	<auteur>Bee Gees</auteur>
+	<prix>5€</prix>
+	<album>Saturday Night Fever</album>
+</cd>
+<cd>
+	<titre>Wait a Minute!</titre>
+	<genre>Musique alternative/indé, RnB alternatif, Pop expérimentale</genre>
+	<image>J:\WWW\s3\projetCD\BD\Images\waitAMinute</image>
+	<auteur>Willow Smith</auteur>
+	<prix>4€</prix>
+	<album>Ardipithecus</album>
 </cd>
