@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <bd>
     <cd>
+		<id>1</id>
         <titre>Black Out Days</titre>
         <genre>Musique alternative/indé</genre>
         <image>Images/blackOutDays.jpg</image>
@@ -9,6 +10,7 @@
         <album>Voices</album>
     </cd>
     <cd>
+		<id>2</id>
         <titre>Blinding Lights</titre>
         <genre>RB/Soul, Synthwave, Pop</genre>
         <image>Images/BlindingLights.jpg</image>
@@ -17,6 +19,7 @@
         <album>Blinding Lights</album>
     </cd>
     <cd>
+		<id>3</id>
         <titre>It's About Damn Time</titre>
         <genre>Funk, RB/Soul, Musique pour enfants, Post-disco, Pop</genre>
         <image>Images/itsAboutDamnTime.jpg</image>
@@ -25,6 +28,7 @@
         <album>Special</album>
     </cd>
     <cd>
+		<id>4</id>
         <titre>Somebody's Watching me</titre>
         <genre>RB/Soul</genre>
         <image>Images/SomebodysWatchingMe.jpg</image>
@@ -33,6 +37,7 @@
         <album>Somebody's Watching Me</album>
     </cd>
     <cd>
+		<id>5</id>
         <titre>Stayin' Alive</titre>
         <genre>Disco, Halloween music, Musique vocale/Easy listening, Rock</genre>
         <image>Images/StayingAlive.jpg</image>
@@ -41,6 +46,7 @@
         <album>Saturday Night Fever</album>
     </cd>
     <cd>
+		<id>6</id>
         <titre>Wait a Minute!</titre>
         <genre>Musique alternative/indé, RnB alternatif, Pop expérimentale</genre>
         <image>Images/waitAMinute.jpg</image>
@@ -48,4 +54,4 @@
         <prix>4€</prix>
         <album>Ardipithecus</album>
     </cd>
-</bd>
+<cd><id>7</id><titre>a</titre><genre>a</genre><image>Ni9tilF-.jpg</image><auteur>a</auteur><prix>a</prix><album>a</album></cd><cd><id>8</id><titre>b</titre><genre>aef</genre><image>AP9WqO4A.jpg</image><auteur>aef</auteur><prix>a</prix><album>a</album></cd></bd>

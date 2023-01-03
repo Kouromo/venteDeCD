@@ -22,6 +22,12 @@
         echo "<input type=file name=image id=image><br><br>";
         echo "<input type=submit value=Envoyer>";
         echo "</form>";
+
+        echo "<form method=post action=supprimerCD.php>";
+        echo "<label for=title>Titre :</label><br>";
+        echo "<input type=text name=title id=titleDelete><br>";
+        echo "<input type=submit value=Envoyer>";
+        echo "</form>";
         echo "</body>";
         echo "</html>";
 

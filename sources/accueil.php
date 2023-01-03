@@ -21,14 +21,7 @@
                     </button>
             </section>
         </header>
-        <h1>Ma boutique de CD</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">CD</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+
         <main>
             <!-- Contenu de la page -->
             <?php
@@ -38,11 +31,23 @@
                 // Parcours chaque enregistrement de CD dans le fichier XML
                 foreach ($xml->cd as $cd)
                 {
-                    echo '<img src="../BD/' . $cd->image . '" alt="Texte alternatif">';
+                    echo '<a href="details.php?id=' . $cd->id . '"><img class="image" src="../BD/' . $cd->image . '" alt="Texte alternatif"></a>';
+                }
+
+                foreach ($xml->cd as $cd)
+                {
                     // Affiche le titre du CD entre des balises h2
                     echo '<h2>' . $cd->titre . '</h2>';
+                }
+
+                foreach ($xml->cd as $cd)
+                {
                     // Affiche l'artiste du CD entre des balises p
                     echo '<p>' . $cd->auteur . '</p>';
+                }
+
+                foreach ($xml->cd as $cd)
+                {
                     // Affiche le prix du CD entre des balises p
                     echo '<p>' . $cd->prix . '</p>';
                 }

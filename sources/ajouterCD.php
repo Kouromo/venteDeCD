@@ -6,12 +6,24 @@
     $album = $_POST['album'];
     $image = $_POST['image'];
 
-    $filename = 'C:\XAMPP\htdocs\venteDeCD\BD\bd.xml';
+    $filename = '../BD/bd.xml';
+    
+    // Charger le fichier XML existant
+    $xml = simplexml_load_file($filename);
+    
+    // Récupérer le dernier identifiant utilisé
+    $lastId = 0;
+    foreach ($xml->cd as $cd) {
+        if ((int) $cd->id > $lastId) {
+            $lastId = (int) $cd->id;
+        }
+    }
     
     // Créer un nouvel élément CD à partir de la chaîne vide
-    $cd = new SimpleXMLElement('<cd></cd>');
+    $cd = $xml->addChild('cd');
     
     // Ajouter les données du CD en tant que sous-éléments de l'élément CD
+    $cd->addChild('id', $lastId + 1);
     $cd->addChild('titre', $title);
     $cd->addChild('genre', $genre);
     $cd->addChild('image', $image);
@@ -19,13 +31,7 @@
     $cd->addChild('prix', $price);
     $cd->addChild('album', $album);
     
-    // Charger le fichier XML existant
-    $xml = simplexml_load_file($filename);
-    
-    // Ajouter l'élément CD au fichier XML
-    $xml->addChild($cd);
-    
     // Enregistrer le fichier XML modifié
     file_put_contents($filename, $xml->asXML());
-
+    
 ?>
