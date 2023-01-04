@@ -8,9 +8,11 @@
     </head>
     <body>
         <header>
-            <img class="logo"
+            <a href = "accueil.php">
+                <img class="logo"
                 src="logo.png"
                 alt="CDSpeed">
+                </a>
 
             <section class="bag-log">
                 <i class="fa-solid fa-bag-shopping"></i>

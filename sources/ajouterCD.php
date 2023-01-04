@@ -4,10 +4,19 @@
     $genre = $_POST['genre'];
     $price = $_POST['price'];
     $album = $_POST['album'];
-    $image = $_POST['image'];
+    //$image = $_POST['image'];
 
     $filename = '../BD/bd.xml';
     
+    // Récupérer le nom de l'image téléchargée
+    $image = $_FILES['image']['name'];
+
+    // Définir le dossier de destination
+    $target = "../BD/Images/".basename($image);
+
+    // Vérifier que le téléchargement s'est bien passé
+    move_uploaded_file($_FILES['image']['tmp_name'], $target);
+
     // Charger le fichier XML existant
     $xml = simplexml_load_file($filename);
     

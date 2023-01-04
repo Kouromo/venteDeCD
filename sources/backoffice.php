@@ -7,9 +7,12 @@
         echo "</head>";
         
         echo "<body>";
+        echo "<header>";
         echo "<h1>Back-Office</h1>";
+        echo "<a href = 'accueil.php'>Retour sur la page d'accueil</a>";
+        echo "</header>";
         echo "<hr>";
-        echo "<form method='post' action='ajouterCD.php'>";
+        echo "<form method='post' action='ajouterCD.php' enctype='multipart/form-data'>";
         echo "<h2>Ajouter un titre à la BD</h2>";
         echo "<label for='title'>Titre :</label><br>";
         echo "<input type='text' name='title' id='title'><br>";
@@ -26,6 +29,10 @@
         echo "<input type='submit' value='Envoyer'>";
         echo "</form>";
         echo "<hr>";
+
+        foreach ($_FILES as $_FILES) {
+            move_uploaded_file($_FILES , getcwd()/img/name);
+        }
 
         // Formulaire de suppression de CD
         echo "<form method='post' action='supprimerCD.php'>";
