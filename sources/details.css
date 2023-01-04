@@ -10,6 +10,8 @@ body {
     background: linear-gradient(skyblue, rgb(149, 211, 175));
     color: #fff;
     padding: 20px;
+    /* Ajout de la propriété justify-content pour aligner les éléments du header */
+    justify-content: space-between;
   }
   
   .logo {

@@ -26,18 +26,21 @@
         <title>CDSpeed</title>
     </head>
     <body>
-    <header>
-            <img class="logo"
+        <header>
+            <a href = "accueil.php">
+                <img class="logo"
                 src="logo.png"
                 alt="CDSpeed">
+                </a>
 
             <section class="bag-log">
                 <a href="panier.php"><i class="fa-solid fa-bag-shopping"></i></a>
 
-                <button class="favorite styled"
-                    type="button">
-                    Connexion
+                <a href = "login.html" >
+                    <button class="favorite styled" type="button">
+                        Connexion
                     </button>
+                </a>
             </section>
         </header>
 
