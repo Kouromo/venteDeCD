@@ -17,7 +17,7 @@
                 <img class="logo"
                 src="logo.png"
                 alt="CDSpeed">
-                </a>
+            </a>
 
             <section class="bag-log">
                 <a href="panier.php"><i class="fa-solid fa-bag-shopping"></i></a>

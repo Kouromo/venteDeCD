@@ -3,16 +3,30 @@
 
         echo "<html>";
         echo "<head>";
-        echo "<title>BACK OFFICE</title>";
-        echo "</head>";
-        
+
+        echo '<meta charset="UTF-8" />';
+
+        echo '<link rel="stylesheet" href="backoffice.css" />';
+
+        echo '<script src="https://kit.fontawesome.com/7c2235d2ba.js" crossorigin="anonymous"></script>';
+        echo '<title>Back-office</title>';
+        echo '</head>';
+
         echo "<body>";
         echo "<header>";
-        echo "<h1>Back-Office</h1>";
-        echo "<a href = 'accueil.php'>Retour sur la page d'accueil</a>";
+        echo '<a href = "accueil.php">';
+        echo '<img class="logo" src="logo.png" alt="CDSpeed">';
+        echo '</a>';
+        echo '<section class="bag-log">';
+        echo '<a href="panier.php"><i class="fa-solid fa-bag-shopping"></i></a>';
+        echo '<a href = "login.html" >';
+        echo '<button class="favorite styled" type="button">Connexion</button>';
+        echo '</a>';
         echo "</header>";
+
         echo "<hr>";
-        echo "<form method='post' action='ajouterCD.php' enctype='multipart/form-data'>";
+
+        echo "<form id='ajout' method='post' action='ajouterCD.php' enctype='multipart/form-data'>";
         echo "<h2>Ajouter un titre à la BD</h2>";
         echo "<label for='title'>Titre :</label><br>";
         echo "<input type='text' name='title' id='title'><br>";
@@ -35,7 +49,7 @@
         }
 
         // Formulaire de suppression de CD
-        echo "<form method='post' action='supprimerCD.php'>";
+        echo "<form id='suppr' method='post' action='supprimerCD.php'>";
         echo "<h2>Supprimer un titre de la BD</h2>";
         echo "<label for='titleDelete'>Titre à supprimer :</label><br>";
         echo "<input type='text' name='titleDelete' id='titleDelete'><br>";
