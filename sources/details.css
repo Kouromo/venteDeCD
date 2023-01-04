@@ -1,79 +1,78 @@
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    display: flex;
-    align-items: center;
-    background: linear-gradient(skyblue, rgb(149, 211, 175));
-    color: #fff;
-    padding: 20px;
-    /* Ajout de la propriété justify-content pour aligner les éléments du header */
-    justify-content: space-between;
-  }
-  
-  .logo {
-    height: 50px;
-    margin-right: auto;
-  }
-  
-  .bag-log {
-    display: flex;
-    align-items: center;
-  }
-  
-  .bag-log a {
-    color: #000;
-    margin-right: 20px;
-    font-size: 2em;
-  }
-  
-  .favorite.styled {
-    background-color: #333;
-    border: none;
-    color: #fff;
-    font-size: 14px;
-    padding: 8px 20px;
-    cursor: pointer;
-  }
-
-  main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  img.image {
-    width: 200px; /* Fixe la largeur de l'image à 200px */
-    height: auto; /* Ajuste l'hauteur de l'image en fonction de sa largeur */
-    float: left; /* Flotte l'image à gauche */
-    margin-right: 20px; /* Ajoute un espace de 20px à droite de l'image */
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
-  
-  h2 {
-    font-size: 2em;
-    margin: 20px 0;
-    text-align: center;
-  }
-  
-  p {
-    font-size: 1.2em;
-    margin: 10px 0;
-    text-align: center;
-  }
-  
-  form {
-    text-align: center;
-  }
-  
-  input[type="submit"] {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #0095dd;
-    color: white;
-    font-size: 1.2em;
-    cursor: pointer;
-  }
+
+header {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(skyblue, rgb(149, 211, 175));
+  color: #fff;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 50px;
+  margin-right: auto;
+}
+
+.bag-log {
+  display: flex;
+  align-items: center;
+}
+
+.bag-log a {
+  color: #000;
+  margin-right: 20px;
+  font-size: 2em;
+}
+
+.favorite.styled {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+img.image {
+  width: 200px;
+  height: auto;
+  float: left;
+  margin-right: 20px;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 20px 0;
+  text-align: center;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 10px 0;
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0095dd;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+}
