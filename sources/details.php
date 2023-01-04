@@ -1,8 +1,27 @@
+<?php
+    session_start();
+
+    // Vérifie si la variable de session "panier" existe
+    if (!isset($_SESSION['panier'])) {
+        // Si elle n'existe pas, on la crée et on lui affecte une valeur vide
+        $_SESSION['panier'] = array();
+    }
+
+    // Vérifie si le formulaire a été soumis en utilisant la méthode POST
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Récupère l'identifiant de l'article dans la variable POST "id"
+        $id = $_POST['id'];
+
+        // Ajoute l'identifiant de l'article à la variable de session "panier"
+        $_SESSION['panier'][] = array('id' => $id);
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8" />
-        <link rel="stylesheet" href="accueil.css" />
+        <link rel="stylesheet" href="details.css" />
         <script src="https://kit.fontawesome.com/7c2235d2ba.js" crossorigin="anonymous"></script>
         <title>CDSpeed</title>
     </head>
@@ -13,7 +32,7 @@
                 alt="CDSpeed">
 
             <section class="bag-log">
-                <i class="fa-solid fa-bag-shopping"></i>
+                <a href="panier.php"><i class="fa-solid fa-bag-shopping"></i></a>
 
                 <button class="favorite styled"
                     type="button">
@@ -25,9 +44,6 @@
         <main>
             <!-- Contenu de la page -->
             <?php
-                // Démarre la session
-                session_start();
-
                 // Charge le fichier XML dans un objet SimpleXML
                 $xml = simplexml_load_file('../BD/bd.xml');
 
@@ -45,8 +61,7 @@
                 echo '<input type="hidden" name="id" value="' . $id . '">';
                 echo '<input type="submit" value="Ajouter au panier">';
                 echo '</form>';
-
-        ?>
+            ?>
         </main>
     </body>
 </html>

@@ -1,3 +1,8 @@
+<?php
+    // Démarre la session
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,7 +20,7 @@
                 </a>
 
             <section class="bag-log">
-                <i class="fa-solid fa-bag-shopping"></i>
+                <a href="panier.php"><i class="fa-solid fa-bag-shopping"></i></a>
 
                 <a href = "login.html" >
                     <button class="favorite styled" type="button">
