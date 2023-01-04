@@ -96,3 +96,7 @@ body {
     cursor: pointer;
   }
   
+  #numcarte
+  {
+    width: 30px;
+  }

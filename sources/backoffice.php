@@ -24,7 +24,6 @@
         echo '</a>';
         echo "</header>";
 
-        echo "<hr>";
 
         echo "<form id='ajout' method='post' action='ajouterCD.php' enctype='multipart/form-data'>";
         echo "<h2>Ajouter un titre à la BD</h2>";
@@ -42,7 +41,6 @@
         echo "<input type='file' name='image' id='image'><br><br>";
         echo "<input type='submit' value='Envoyer'>";
         echo "</form>";
-        echo "<hr>";
 
         foreach ($_FILES as $_FILES) {
             move_uploaded_file($_FILES , getcwd()/img/name);

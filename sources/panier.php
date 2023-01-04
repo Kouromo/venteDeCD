@@ -92,10 +92,10 @@
                 <section>
                     <?php
                         echo 'Entrez votre numéro de carte';
-                        echo '<input type="number" name="numeric_field" maxlength="16">';
+                        echo '<input id="numCarte" type="number" name="numeric_field" maxlength="16">';
 
                         echo 'Entrez votre CSV';
-                        echo '<input type="number" name="numeric_field" maxlength="3">';
+                        echo '<input id="csv" type="number" name="numeric_field" maxlength="3">';
                     ?>
                 </section>
                 <input type="submit" value="Envoyer">
