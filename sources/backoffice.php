@@ -14,7 +14,7 @@
 
         echo "<body>";
         echo "<header>";
-        echo '<a href = "accueil.php">';
+        echo '<a href = "index.php">';
         echo '<img class="logo" src="logo.png" alt="CDSpeed">';
         echo '</a>';
         echo '<section class="bag-log">';
