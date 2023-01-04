@@ -50,9 +50,22 @@
         echo "<form id='suppr' method='post' action='supprimerCD.php'>";
         echo "<h2>Supprimer un titre de la BD</h2>";
         echo "<label for='titleDelete'>Titre à supprimer :</label><br>";
-        echo "<input type='text' name='titleDelete' id='titleDelete'><br>";
+        echo "<select name='titleDelete' id='titleDelete'>";
+
+        // Charger le fichier XML
+        $xml = simplexml_load_file('../BD/bd.xml');
+
+        // Parcourir les CD dans le fichier XML
+        foreach ($xml->cd as $cd) {
+            $title = $cd->titre;
+            echo "<option value='$title'>$title</option>";
+        }
+
+        echo "</select><br>";
         echo "<input type='submit' value='Envoyer'>";
         echo "</form>";
+
+
         
         // Fin du corps HTML
         echo "</body>";
