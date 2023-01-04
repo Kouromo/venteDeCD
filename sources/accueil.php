@@ -1,3 +1,8 @@
+<?php
+    // Démarre la session
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,7 +18,7 @@
                 alt="CDSpeed">
 
             <section class="bag-log">
-                <i class="fa-solid fa-bag-shopping"></i>
+                <a href="panier.php"><i class="fa-solid fa-bag-shopping"></i></a>
 
                 <button class="favorite styled"
                     type="button">

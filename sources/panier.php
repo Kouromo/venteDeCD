@@ -1,18 +1,50 @@
+<?php
+    session_start();
+
+    if (!isset($_SESSION['panier'])) {
+        $_SESSION['panier'] = array();
+    }
+
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $id = $_POST['id'];
+
+        $_SESSION['panier'][] = array('id' => $id);
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8" />
-        <link rel="stylesheet" href="accueil.css" />
+        <link rel="stylesheet" href="panier.css" />
+        <script src="https://kit.fontawesome.com/7c2235d2ba.js" crossorigin="anonymous"></script>
+        <script>
+            function deleteArticle(id) {
+                // Envoie une requête HTTP DELETE pour supprimer l'article
+                // Créé un objet XMLHttpRequest
+                var xhr = new XMLHttpRequest();
+                // Ouvre une requête HTTP DELETE vers la page de suppression en utilisant l'identifiant de l'article comme paramètre de l'URL
+                xhr.open('DELETE', 'delete.php?id=' + id);
+                // Envoie la requête
+                xhr.send();
+                // Rafraichit la page courante une fois la requête terminée
+                xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    location.reload();
+                }
+            }
+            }
+        </script>
         <title>Panier</title>
     </head>
     <body>
-    <header>
+        <header>
             <img class="logo"
                 src="logo.png"
                 alt="CDSpeed">
 
             <section class="bag-log">
-                <i class="fa-solid fa-bag-shopping"></i>
+                <a href="panier.php"><i class="fa-solid fa-bag-shopping"></i></a>
 
                 <button class="favorite styled"
                     type="button">
@@ -21,21 +53,17 @@
             </section>
         </header>
         <main>
-            <?php
-                session_start();
-                // Vérifie si la variable de session "panier" existe
-                if (isset($_SESSION['panier'])) {
-                    // Si elle existe, charge le fichier XML dans un objet SimpleXML
+            <h2>Contenu de votre panier</h2>
+            <table>
+                <tr>
+                    <th>Titre</th>
+                    <th>Auteur</th>
+                    <th>Prix</th>
+                    <th>Supprimer</th>
+                </tr>
+                <?php
                     $xml = simplexml_load_file('../BD/bd.xml');
-                    // Affiche le titre de la page
-                    echo '<h2>Contenu de votre panier</h2>';
-                    // Affiche le contenu du panier dans un tableau
-                    echo '<table>';
-                    echo '<tr>';
-                    echo '<th>Titre</th>';
-                    echo '<th>Auteur</th>';
-                    echo '<th>Prix</th>';
-                    echo '</tr>';
+
                     // Pour chaque article du panier
                     foreach ($_SESSION['panier'] as $article) {
                         // Récupère l'identifiant de l'article dans la variable $id
@@ -51,16 +79,11 @@
                         echo '<td>' . $titre . '</td>';
                         echo '<td>' . $auteur . '</td>';
                         echo '<td>' . $prix . '</td>';
+                        echo '<td><a href="#" onclick="deleteArticle(' .$id.')"><i class="fa-solid fa-trash-alt"></i></a></td>';
                         echo '</tr>';
                     }
-
-                    echo '</table>';
-                }
-                else {
-                    // Si la variable de session "panier" n'existe pas, on affiche un message
-                    echo "Votre panier est vide.";
-                }
-            ?>
+                ?>
+            </table>
         </main>
     </body>
 </html>
