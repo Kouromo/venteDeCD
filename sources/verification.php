@@ -9,7 +9,6 @@
     $expiration = new DateTime($expiration_date);
 
     // Vérifier si le premier et le dernier chiffre sont identiques
-    if (($numeric_field[0] == $numeric_field[strlen($numeric_field) - 1]) && (strtotime("+3 months", $dateDuJour) > $date)) {
     if (($numeric_field[0] == $numeric_field[strlen($numeric_field) - 1]) && !($expiration < $today->modify('+3 months'))) {
         // Si le test est réussi, effacer la variable de session panier
         unset($_SESSION['panier']);
