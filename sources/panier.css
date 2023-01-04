@@ -1,100 +1,107 @@
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(skyblue, rgb(149, 211, 175));
+    color: #fff;
+    padding: 20px;
+    /* Ajout de la propriété justify-content pour aligner les éléments du header */
+    justify-content: space-between;
+  }
+  
+  .logo {
+    height: 50px;
+    margin-right: auto;
+  }
+  
+  .bag-log {
+    display: flex;
+    align-items: center;
+  }
+  
+  .bag-log a {
+    color: #000;
+    margin-right: 20px;
+    font-size: 2em;
+  }
+  
+  .favorite.styled {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    cursor: pointer;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  th {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  input[type="submit"] {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 20px;
+    cursor: pointer;
+  }
+  
+#numeric_field
+{
+  width: 120px;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  background: linear-gradient(skyblue, rgb(149, 211, 175));
-  color: #fff;
-  padding: 20px;
-  justify-content: space-between;
-}
-
-.logo {
-  height: 50px;
-  margin-right: auto;
-}
-
-.bag-log {
-  display: flex;
-  align-items: center;
-}
-
-.bag-log a {
-  color: #000;
-  margin-right: 20px;
-  font-size: 2em;
-}
-
-.favorite.styled {
-  background-color: #333;
-  border: none;
-  color: #fff;
-  font-size: 14px;
-  padding: 8px 20px;
-  cursor: pointer;
-}
-
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-th {
-  background-color: #333;
-  color: #fff;
-}
-
-form {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-section {
-  margin-bottom: 20px;
-}
-
-input[type="number"] {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-input[type="submit"] {
-  background-color: #333;
-  border: none;
-  color: #fff;
-  font-size: 16px;
-  padding: 12px 20px;
-  cursor: pointer;
-}
-
-#numcarte {
-  width: 30px;
+#csv
+{
+  width: 25px;
 }
