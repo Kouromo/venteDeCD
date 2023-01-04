@@ -1,79 +1,96 @@
-* {
+body {
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
-    font: 1.2em "Fira Sans", sans-serif;
-}
-
-body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 10% 80% 10%;
-}
-
-header {
-    grid-row: 1;
-    grid-column: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: linear-gradient(skyblue, rgb(149, 211, 175));
-    height: 10vh;
+  }
+  
+  header {
+    display: flex;
     align-items: center;
-    background-size: cover;
-}
-
-.logo {
-    width: 200px;
-    margin: auto 1em auto 1em;
-}
-
-.bag-log {
-    text-align: right;
-    margin: auto 1em auto 1em;
-}
-
-.styled {
-    border: 0;
-    line-height: 2.5;
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: center;
+    background: linear-gradient(skyblue, rgb(149, 211, 175));
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 10px;
-    background-color: rgba(220, 0, 0, 1);
-    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
-}
-
-.styled:hover {
-    background-color: rgba(255, 0, 0, 1);
-}
-
-.styled:active {
-    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
-}
-
-main {
-    padding-top: 75px;
-    text-align: center;
-}
-
-table {
-    width: 100%; /* Largeur du tableau */
-    border-collapse: collapse; /* Retire les bordures entre les cellules */
-}
-
-th {
-    background-color: #333; /* Couleur de fond des en-têtes */
-    color: #fff; /* Couleur du texte des en-têtes */
-    font-weight: bold; /* Gras pour les en-têtes */
-}
-
-td, th {
-    border: 1px solid #ccc; /* Ajoute une bordure autour des cellules */
-    padding: 8px; /* Espacement intérieur des cellules */
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2; /* Couleur de fond des lignes paires */
-}
+    padding: 20px;
+  }
+  
+  .logo {
+    height: 50px;
+    margin-right: auto;
+  }
+  
+  .bag-log {
+    display: flex;
+    align-items: center;
+  }
+  
+  .bag-log a {
+    color: #000;
+    margin-right: 20px;
+    font-size: 2em;
+  }
+  
+  .favorite.styled {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    cursor: pointer;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  th {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  input[type="submit"] {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 20px;
+    cursor: pointer;
+  }
+  

@@ -26,7 +26,7 @@
         <title>CDSpeed</title>
     </head>
     <body>
-        <header>
+    <header>
             <img class="logo"
                 src="logo.png"
                 alt="CDSpeed">
