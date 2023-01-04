@@ -7,10 +7,13 @@
     // Vérifier si le premier et le dernier chiffre sont identiques
     if ($numeric_field[0] == $numeric_field[strlen($numeric_field) - 1]) {
         // Si le test est réussi, effacer la variable de session panier
-        echo "Le paiement a été accepté";
         unset($_SESSION['panier']);
+        // Rediriger vers la page d'accueil
+        header('Location: accueil.php');
+        exit;
     }
     else {
-        echo "Votre carte n'est pas bonne";
+        // Si le test échoue, afficher un message d'erreur
+        echo "Votre carte n'est pas valide";
     }
 ?>

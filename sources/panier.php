@@ -90,17 +90,13 @@
 
             <form action="verification.php" method="post">
                 <section>
-                    <?php
-                        echo 'Entrez votre numéro de carte';
-                        echo '<input id="numCarte" type="number" name="numeric_field" maxlength="16">';
-
-                        echo 'Entrez votre CSV';
-                        echo '<input id="csv" type="number" name="numeric_field" maxlength="3">';
-                    ?>
+                    <label for="numeric_field">Entrez votre numéro de carte :</label><br>
+                    <input type="text" name="numeric_field" id="numeric_field" maxlength="16"><br>
+                    <label for="csv">Entrez votre CSV :</label><br>
+                    <input type="text" name="csv" id="csv" maxlength="3"><br>
                 </section>
                 <input type="submit" value="Envoyer">
             </form>
-
         </main>
     </body>
 </html>
