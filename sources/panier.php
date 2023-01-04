@@ -57,48 +57,58 @@
         </header>
         <main>
             <h2>Contenu de votre panier</h2>
-            <table>
-                <tr>
-                    <th>Titre</th>
-                    <th>Auteur</th>
-                    <th>Prix</th>
-                    <th>Supprimer</th>
-                </tr>
+
                 <?php
                     $xml = simplexml_load_file('../BD/bd.xml');
 
                     // Pour chaque article du panier
-                    foreach ($_SESSION['panier'] as $article) {
-                        // Récupère l'identifiant de l'article dans la variable $id
-                        $id = $article['id'];
 
-                        // Utilise l'identifiant de l'article pour récupérer les informations de l'article dans le fichier XML
-                        $titre = $xml->cd[$id-1]->titre;
-                        $auteur = $xml->cd[$id-1]->auteur;
-                        $prix = $xml->cd[$id-1]->prix;
-
-                        // Affiche les informations de l'article dans un tableau
+                    if (empty($_SESSION['panier'])) {
+                        echo "<p>Le panier est vide. Pour ajouter du contenu au panier, cliquez sur un disque et sélectionnez \"Ajouter au panier\".</p>";
+                    }
+                    else {
+                        echo '<table>';
                         echo '<tr>';
-                        echo '<td>' . $titre . '</td>';
-                        echo '<td>' . $auteur . '</td>';
-                        echo '<td>' . $prix . '</td>';
-                        echo '<td><a href="#" onclick="deleteArticle(' .$id.')"><i class="fa-solid fa-trash-alt"></i></a></td>';
+                        echo '<th>Titre</th>';
+                        echo '<th>Auteur</th>';
+                        echo '<th>Prix</th>';
+                        echo '<th>Supprimer</th>';
                         echo '</tr>';
+                        
+                        foreach ($_SESSION['panier'] as $article) {
+                            // Récupère l'identifiant de l'article dans la variable $id
+                            $id = $article['id'];
+    
+                            // Utilise l'identifiant de l'article pour récupérer les informations de l'article dans le fichier XML
+                            $titre = $xml->cd[$id-1]->titre;
+                            $auteur = $xml->cd[$id-1]->auteur;
+                            $prix = $xml->cd[$id-1]->prix;
+    
+                            // Affiche les informations de l'article dans un tableau
+                            echo '<tr>';
+                            echo '<td>' . $titre . '</td>';
+                            echo '<td>' . $auteur . '</td>';
+                            echo '<td>' . $prix . '</td>';
+                            echo '<td><a href="#" onclick="deleteArticle(' .$id.')"><i class="fa-solid fa-trash-alt"></i></a></td>';
+                            echo '</tr>';
+                        }
+
+                        echo '</table>';
+
+                        echo '<form action="verification.php" method="post">';
+                        echo '<section>';
+                        echo '<label for="numeric_field">Entrez votre numéro de carte :</label><br>';
+                        echo '<input type="text" name="numeric_field" id="numeric_field" maxlength="16"><br>';
+                        echo '<label for="csv">Entrez votre CSV :</label><br>';
+                        echo '<input type="text" name="csv" id="csv" maxlength="3"><br>';
+                        echo '<label for="dateExpiration">Date d\'expiration :</label><br>';
+                        echo '<input type="date" name="dateExpiration" id="dateExpiration"><br>';
+                        echo '</section>';
+                        echo '<input type="submit" value="Envoyer">';
+                        echo '</form>';
+
                     }
                 ?>
-            </table>
-
-            <form action="verification.php" method="post">
-                <section>
-                    <label for="numeric_field">Entrez votre numéro de carte :</label><br>
-                    <input type="text" name="numeric_field" id="numeric_field" maxlength="16"><br>
-                    <label for="csv">Entrez votre CSV :</label><br>
-                    <input type="text" name="csv" id="csv" maxlength="3"><br>
-                    <label for="dateExpiration">Date d'expiration :</label><br>
-                    <input type="date" name="dateExpiration" id="dateExpiration"><br>
-                </section>
-                <input type="submit" value="Envoyer">
-            </form>
         </main>
     </body>
 </html>
