@@ -96,7 +96,12 @@ body {
     cursor: pointer;
   }
   
-  #numcarte
-  {
-    width: 30px;
-  }
+#numeric_field
+{
+  width: 120px;
+}
+
+#csv
+{
+  width: 25px;
+}

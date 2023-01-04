@@ -13,7 +13,7 @@
     </head>
     <body>
         <header>
-            <a href = "accueil.php">
+            <a href = "#">
                 <img class="logo"
                 src="logo.png"
                 alt="CDSpeed">

@@ -94,6 +94,8 @@
                     <input type="text" name="numeric_field" id="numeric_field" maxlength="16"><br>
                     <label for="csv">Entrez votre CSV :</label><br>
                     <input type="text" name="csv" id="csv" maxlength="3"><br>
+                    <label for="dateExpiration">Date d'expiration :</label><br>
+                    <input type="date" name="dateExpiration" id="dateExpiration"><br>
                 </section>
                 <input type="submit" value="Envoyer">
             </form>
