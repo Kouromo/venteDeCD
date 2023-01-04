@@ -17,10 +17,11 @@
             <section class="bag-log">
                 <i class="fa-solid fa-bag-shopping"></i>
 
-                <button class="favorite styled"
-                    type="button">
-                    Connexion
+                <a href = "login.html" >
+                    <button class="favorite styled" type="button">
+                        Connexion
                     </button>
+                </a>
             </section>
         </header>
 
