@@ -77,6 +77,9 @@
                         $auteur = $xml->cd[$id-1]->auteur;
                         $prix = $xml->cd[$id-1]->prix;
 
+                        // Ajoute le prix de l'article au total
+                        $total += $prix;
+
                         // Affiche les informations de l'article dans un tableau
                         echo '<tr>';
                         echo '<td>' . $titre . '</td>';
@@ -85,6 +88,9 @@
                         echo '<td><a href="#" onclick="deleteArticle(' .$id.')"><i class="fa-solid fa-trash-alt"></i></a></td>';
                         echo '</tr>';
                     }
+                    echo '<tr>';
+                    echo '<td colspan="3" style="text-align: right; font-weight: bold;">Total : ' . $total . ' €</td>';
+                    echo '</tr>';
                 ?>
             </table>
 
@@ -99,6 +105,7 @@
                 </section>
                 <input type="submit" value="Envoyer">
             </form>
+            <p>
         </main>
     </body>
 </html>
