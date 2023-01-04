@@ -105,3 +105,9 @@ body {
 {
   width: 25px;
 }
+
+p.empty-cart {
+  font-size: 1.5em;
+  font-style: italic;
+  color: gray;
+}

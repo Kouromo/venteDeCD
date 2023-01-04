@@ -57,13 +57,7 @@
         </header>
         <main>
             <h2>Contenu de votre panier</h2>
-            <table>
-                <tr>
-                    <th>Titre</th>
-                    <th>Auteur</th>
-                    <th>Prix</th>
-                    <th>Supprimer</th>
-                </tr>
+
                 <?php
                     $xml = simplexml_load_file('../BD/bd.xml');
 
@@ -77,9 +71,6 @@
                         $auteur = $xml->cd[$id-1]->auteur;
                         $prix = $xml->cd[$id-1]->prix;
 
-                        // Ajoute le prix de l'article au total
-                        $total += $prix;
-
                         // Affiche les informations de l'article dans un tableau
                         echo '<tr>';
                         echo '<td>' . $titre . '</td>';
@@ -92,20 +83,6 @@
                     echo '<td colspan="3" style="text-align: right; font-weight: bold;">Total : ' . $total . ' €</td>';
                     echo '</tr>';
                 ?>
-            </table>
-
-            <form action="verification.php" method="post">
-                <section>
-                    <label for="numeric_field">Entrez votre numéro de carte :</label><br>
-                    <input type="text" name="numeric_field" id="numeric_field" maxlength="16"><br>
-                    <label for="csv">Entrez votre CSV :</label><br>
-                    <input type="text" name="csv" id="csv" maxlength="3"><br>
-                    <label for="dateExpiration">Date d'expiration :</label><br>
-                    <input type="date" name="dateExpiration" id="dateExpiration"><br>
-                </section>
-                <input type="submit" value="Envoyer">
-            </form>
-            <p>
         </main>
     </body>
 </html>
