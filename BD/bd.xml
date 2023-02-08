@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bd>
-    <cd>
-		<id>1</id>
-        <titre>Black Out Days</titre>
-        <genre>Musique alternative/indé</genre>
-        <image>blackOutDays.jpg</image>
-        <auteur>Phantogram</auteur>
-        <prix>5€</prix>
-        <album>Voices</album>
-    </cd>
+    
     <cd>
 		<id>2</id>
         <titre>Blinding Lights</titre>
@@ -54,4 +46,4 @@
         <prix>4€</prix>
         <album>Ardipithecus</album>
     </cd>
-</bd>
+<cd><id>7</id><titre>sabaton</titre><genre>metal</genre><image>the-red-baron-lyric-video-554x314.jpg</image><auteur>the red baron</auteur><prix>10</prix><album>the red baron</album></cd></bd>
